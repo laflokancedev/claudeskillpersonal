@@ -1,0 +1,37 @@
+category: architecture
+signatures:
+  - id: feature-sliced
+    style: feature-sliced
+    confidence: 0.6
+    match:
+      pathContains: ["entities/", "widgets/", "shared/ui/"]
+  - id: hexagonal
+    style: hexagonal
+    confidence: 0.75
+    match:
+      pathContains: ["ports/", "adapters/"]
+  - id: layered
+    style: layered
+    confidence: 0.6
+    match:
+      pathContains: ["controllers/", "services/", "repositories/"]
+  - id: atomic-design
+    style: atomic-design
+    confidence: 0.7
+    match:
+      pathContains: ["atoms/", "molecules/", "organisms/"]
+  - id: microservices
+    style: microservices
+    confidence: 0.6
+    match:
+      pathContains: ["services/", "gateway/"]
+  - id: modular-plugin
+    style: modular-plugin
+    confidence: 0.85
+    match:
+      pathContains: ["agents/", "skills/", "commands/", "policies/"]
+  - id: event-driven
+    style: event-driven
+    confidence: 0.6
+    match:
+      pathContains: ["events/", "handlers/", "subscribers/"]

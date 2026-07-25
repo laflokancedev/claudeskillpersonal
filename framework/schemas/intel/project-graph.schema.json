@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/intel/project-graph.schema.json",
+  "title": "ProjectGraph (ADR-039)",
+  "type": "object",
+  "required": ["apiVersion", "granularity", "nodes", "edges"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "granularity": { "type": "string", "enum": ["manifest", "ast"] },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type"],
+        "properties": { "id": { "type": "string" }, "type": { "type": "string" } }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to", "kind"],
+        "properties": { "from": { "type": "string" }, "to": { "type": "string" }, "kind": { "type": "string" } }
+      }
+    }
+  }
+}

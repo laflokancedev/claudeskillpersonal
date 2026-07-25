@@ -1,0 +1,44 @@
+{
+  "$schema": "./schemas/framework-config.schema.json",
+  "_shim": "V3 (ADR-020) : la source de vérité des constantes est policies/. Ce fichier reste un shim rétrocompatible lu en fallback par tools/policy.mjs. Éditer les policies, pas ces valeurs.",
+  "framework": {
+    "name": "dev-crew",
+    "version": "6.0.0",
+    "apiVersion": "1.0.0",
+    "sdkApiVersion": "1.0.0",
+    "metaApiVersion": "1.0.0",
+    "registrySchemaVersion": "1.0.0"
+  },
+  "discovery": {
+    "skillsGlob": "skills/**/skill.json",
+    "workflowsGlob": "workflows/*.yaml",
+    "registryPath": "skills/registry.json",
+    "staleCheck": "sourceHash"
+  },
+  "tokenBudget": {
+    "perRun": 120000,
+    "perStep": 20000,
+    "perSkill": 12000,
+    "warnAtPct": 80
+  },
+  "memory": {
+    "retention": { "summariesMaxFiles": 500, "conversationTtlDays": 30 },
+    "prefer": ["summaries", "references", "compressed"]
+  },
+  "qualityGates": {
+    "architecture": 90,
+    "api": 90,
+    "security": 95,
+    "performance": 85,
+    "accessibility": 90,
+    "testing": 85,
+    "documentation": 90
+  },
+  "models": {
+    "orchestrator": "claude-sonnet-5",
+    "validator": "claude-sonnet-5",
+    "synthesis": "claude-opus-4-8",
+    "specialistDefault": "inherit"
+  },
+  "capabilityCollision": { "resolveBy": ["priority", "maturityLevel"] }
+}

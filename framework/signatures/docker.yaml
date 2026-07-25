@@ -1,0 +1,12 @@
+category: docker
+signatures:
+  - id: dockerfile
+    confidence: 0.95
+    provides: [docker]
+    match:
+      files: ["Dockerfile"]
+  - id: docker-compose
+    confidence: 0.9
+    provides: [docker, orchestration]
+    match:
+      files: ["docker-compose.yml", "docker-compose.yaml", "compose.yaml"]

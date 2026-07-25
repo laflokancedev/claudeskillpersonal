@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/quality-report.schema.json",
+  "title": "Quality report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["runId", "overall", "gates", "pass"],
+  "properties": {
+    "runId": { "type": "string" },
+    "overall": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "gates": { "type": "object", "additionalProperties": { "type": "integer" } },
+    "pass": { "type": "boolean" },
+    "contradictions": { "type": "array", "items": { "type": "string" } },
+    "conventionIssues": { "type": "array", "items": { "type": "string" } },
+    "fixes": { "type": "array", "items": { "type": "string" } },
+    "verdict": { "type": "string", "enum": ["conforme", "non-conforme", "conforme-avec-reserves"] }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/registry.schema.json",
+  "title": "Skill registry (generated)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "framework", "generatedAt", "sourceHash", "skills", "capabilityIndex"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "framework": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "sourceHash": { "type": "string" },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "version", "category", "path", "entry", "capabilities"],
+        "properties": {
+          "id": { "type": "string" },
+          "version": { "type": "string" },
+          "category": { "type": "string" },
+          "path": { "type": "string" },
+          "entry": { "type": "string" },
+          "capabilities": { "type": "array", "items": { "type": "string" } },
+          "priority": { "type": "integer" },
+          "maturityLevel": { "type": "string" },
+          "estimatedCost": { "type": "number" },
+          "recommendedModels": { "type": "array", "items": { "type": "string" } },
+          "compatibleCommands": { "type": "array", "items": { "type": "string" } },
+          "knowledge": { "type": "array" }
+        }
+      }
+    },
+    "capabilityIndex": {
+      "type": "object",
+      "additionalProperties": { "type": "array", "items": { "type": "string" } }
+    }
+  }
+}

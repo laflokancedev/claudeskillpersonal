@@ -1,0 +1,12 @@
+# Définitions de métriques communes (ADR-077). Toute évolution doit être mesurable.
+definitions:
+  contractDensity:
+    unit: ratio
+    description: "schémas / (tools + sdk) — proxy de couverture contractuelle"
+    target: 0.5
+  extensions:
+    unit: count
+    description: "nombre d'extensions chargées"
+  skills:
+    unit: count
+    description: "skills indexés (cœur + extensions)"

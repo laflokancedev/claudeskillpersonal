@@ -1,0 +1,13 @@
+{
+  "api": {
+    "schemas/api/deliverable.schema.json": "sha256:7904981cefbd7d24903dc199b635089f1d17e4c337331c9fcad76185656deb1e",
+    "schemas/api/final-document.schema.json": "sha256:e0e26b6a148fbe818e8dd78f9b8541132b9ad621ecbda43422dce467bb24e3bb",
+    "schemas/api/knowledge-decision.schema.json": "sha256:620b90b93879412760460dbe21cfccfe7b3ef56591461c98836510c98c4ceb0e",
+    "schemas/api/model-decision.schema.json": "sha256:217b1e206255f1c60dc29587f8c9af73e84d6a54dc136f51bde598187330da1d",
+    "schemas/api/plan.schema.json": "sha256:94b479f9bbac14ddc5fda8eff47db46037bc428bf058e168514f93e2223dc1a6",
+    "schemas/api/schedule.schema.json": "sha256:c0be05a62477d8583a1945fefa77f91da4b467d63b7993a51a55c89baa3ce74b",
+    "schemas/api/task-input.schema.json": "sha256:7ea57591c1db17e09c9a5f3a6c3831f8269837a4a987909ef07871afeb9cf075",
+    "schemas/api/validation-report.schema.json": "sha256:c49be2d8b27a21ce1b950a48dd52fa36acfed1a678d7b42b95c23dbe0879640b"
+  },
+  "sdk": "sha256:28cdaedf7afb8dd0df6efd66168bf68766b7906b46e2e40bc891c4b11dcec415"
+}

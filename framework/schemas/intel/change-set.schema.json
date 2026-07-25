@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/intel/change-set.schema.json",
+  "title": "ChangeSet (Change Detector, ADR-045)",
+  "type": "object",
+  "required": ["apiVersion", "added", "removed", "modified"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "added": { "type": "array", "items": { "type": "string" } },
+    "removed": { "type": "array", "items": { "type": "string" } },
+    "modified": { "type": "array", "items": { "type": "string" } },
+    "unchanged": { "type": "integer" }
+  }
+}

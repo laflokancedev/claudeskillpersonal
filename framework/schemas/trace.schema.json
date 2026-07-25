@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/trace.schema.json",
+  "title": "Execution trace (per step)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["runId", "stepId", "status"],
+  "properties": {
+    "runId": { "type": "string" },
+    "workflow": { "type": "string" },
+    "stepId": { "type": "string" },
+    "skillId": { "type": "string" },
+    "capabilities": { "type": "array", "items": { "type": "string" } },
+    "model": { "type": "string" },
+    "startedAt": { "type": "string" },
+    "durationMs": { "type": "number" },
+    "tokensIn": { "type": "number" },
+    "tokensOut": { "type": "number" },
+    "estCostUsd": { "type": "number" },
+    "status": { "type": "string", "enum": ["ok", "warning", "error"] },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "errors": { "type": "array", "items": { "type": "string" } }
+  }
+}

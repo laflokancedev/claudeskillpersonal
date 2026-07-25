@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/api/knowledge-decision.schema.json",
+  "title": "KnowledgeDecision (knowledge-router -> thread)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "docs"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "taskId": { "type": ["string", "null"] },
+    "skillId": { "type": "string" },
+    "docs": { "type": "array", "items": { "type": "string" } },
+    "rationale": { "type": "string" }
+  }
+}

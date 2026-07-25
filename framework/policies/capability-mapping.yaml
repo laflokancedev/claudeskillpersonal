@@ -1,0 +1,22 @@
+# Capability Planner (ADR-041) : signal de profil (provides d'une détection) → capacités
+# framework nécessaires. Le planner déduplique et filtre aux capacités présentes au registre.
+map:
+  javascript: [architecture-style]
+  nodejs: [architecture-style]
+  esm: [architecture-style]
+  claude-code-plugin: [architecture-style]
+  agent-framework: [architecture-style]
+  json-schema: [openapi]
+  contracts: [openapi]
+  react: [react, ui-components]
+  nextjs: [nextjs, seo-fe]
+  vue: [architecture-style]
+  services: [services, workers]
+  rest: [openapi, rest]
+  openapi: [openapi]
+  postgres-schema: [postgres-schema, migrations]
+  migrations: [migrations]
+  docker: [services]
+  ci: [architecture-style]
+  documentation: [architecture-style]
+default: [architecture-style]

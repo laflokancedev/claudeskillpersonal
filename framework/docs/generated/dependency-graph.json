@@ -1,0 +1,294 @@
+{
+  "nodes": {
+    "skills": [
+      "engineering.api",
+      "engineering.architecture",
+      "engineering.backend",
+      "engineering.database",
+      "engineering.frontend"
+    ],
+    "capabilities": [
+      "openapi",
+      "rest",
+      "endpoints",
+      "versioning",
+      "pagination",
+      "error-format",
+      "webhooks",
+      "idempotency",
+      "architecture-style",
+      "ddd",
+      "clean-architecture",
+      "hexagonal",
+      "microservices",
+      "monolith",
+      "adr",
+      "diagrams",
+      "services",
+      "workers",
+      "queues",
+      "auth-integration",
+      "caching",
+      "logging",
+      "observability-hooks",
+      "postgres-schema",
+      "indexing",
+      "migrations",
+      "relations",
+      "query-optimization",
+      "er-diagram",
+      "react",
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "ui-components",
+      "state-management",
+      "seo-fe",
+      "code-splitting"
+    ],
+    "workflows": [
+      "sds.yaml"
+    ],
+    "policies": [
+      "budgets.yaml",
+      "execution.yaml",
+      "memory.yaml",
+      "models.yaml",
+      "quality.yaml",
+      "routing.yaml",
+      "security.yaml"
+    ],
+    "schemas": [
+      "schemas/api/deliverable.schema.json",
+      "schemas/api/final-document.schema.json",
+      "schemas/api/knowledge-decision.schema.json",
+      "schemas/api/model-decision.schema.json",
+      "schemas/api/plan.schema.json",
+      "schemas/api/schedule.schema.json",
+      "schemas/api/task-input.schema.json",
+      "schemas/api/validation-report.schema.json",
+      "schemas/artifact.schema.json",
+      "schemas/events/event-envelope.schema.json",
+      "schemas/features.schema.json",
+      "schemas/framework-config.schema.json",
+      "schemas/quality-report.schema.json",
+      "schemas/registry.schema.json",
+      "schemas/skill.schema.json",
+      "schemas/trace.schema.json",
+      "schemas/workflow.schema.json"
+    ],
+    "agents": [
+      "architect-orchestrator.md",
+      "README.md",
+      "specialist.md",
+      "synthesis-agent.md",
+      "validator-agent.md"
+    ]
+  },
+  "edges": [
+    {
+      "from": "engineering.api",
+      "to": "openapi",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.api",
+      "to": "rest",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.api",
+      "to": "endpoints",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.api",
+      "to": "versioning",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.api",
+      "to": "pagination",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.api",
+      "to": "error-format",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.api",
+      "to": "webhooks",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.api",
+      "to": "idempotency",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.api",
+      "to": "postgres-schema",
+      "kind": "needs"
+    },
+    {
+      "from": "engineering.architecture",
+      "to": "architecture-style",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.architecture",
+      "to": "ddd",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.architecture",
+      "to": "clean-architecture",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.architecture",
+      "to": "hexagonal",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.architecture",
+      "to": "microservices",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.architecture",
+      "to": "monolith",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.architecture",
+      "to": "adr",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.architecture",
+      "to": "diagrams",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.backend",
+      "to": "services",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.backend",
+      "to": "workers",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.backend",
+      "to": "queues",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.backend",
+      "to": "auth-integration",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.backend",
+      "to": "caching",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.backend",
+      "to": "logging",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.backend",
+      "to": "observability-hooks",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.backend",
+      "to": "jwt",
+      "kind": "needs"
+    },
+    {
+      "from": "engineering.database",
+      "to": "postgres-schema",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.database",
+      "to": "indexing",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.database",
+      "to": "migrations",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.database",
+      "to": "relations",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.database",
+      "to": "query-optimization",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.database",
+      "to": "er-diagram",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "react",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "nextjs",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "typescript",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "tailwind",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "ui-components",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "state-management",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "seo-fe",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "code-splitting",
+      "kind": "provides"
+    },
+    {
+      "from": "engineering.frontend",
+      "to": "design-tokens",
+      "kind": "needs"
+    }
+  ],
+  "missing": [
+    "engineering.backend → jwt (non fourni)",
+    "engineering.frontend → design-tokens (non fourni)"
+  ]
+}

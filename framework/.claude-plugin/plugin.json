@@ -1,0 +1,21 @@
+{
+  "name": "dev-crew",
+  "version": "6.0.0",
+  "description": "Meta-plateforme d'orchestration IA pour Claude Code. S'analyse elle-même (introspection, dette technique, métriques, preuve de compatibilité) et PROPOSE ses évolutions via un Self Evolution Report — sans jamais modifier son propre code (read-only, décision humaine). Extensible par SDK public (skills, workflows, policies, signatures, routers, hooks, packs), Project Intelligence déterministe, registre par capacités, contrats JSON versionnés. Cœur/SDK/API v1 gelés ; tout additif et déterministe.",
+  "author": {
+    "name": "cmm07t83",
+    "email": "cmm07t83@gmail.com"
+  },
+  "homepage": "https://github.com/cmm07t83/dev-crew",
+  "keywords": [
+    "multi-agent",
+    "orchestrator",
+    "platform",
+    "registry",
+    "capabilities",
+    "workflow-engine",
+    "extensible",
+    "software-design"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,7 @@
+# Sources de la Marketplace (ADR-059). Slice : local/offline seulement.
+sources:
+  - id: local
+    type: local
+    path: extensions/
+    enabled: true
+# Types futurs (gated, extension du loader) : git, github, registry, private.

@@ -1,0 +1,22 @@
+# Politique de la couche Project Intelligence (ADR-036→050). Analyse déterministe par défaut.
+scan:
+  maxFileBytes: 524288
+  denylist:
+    - node_modules
+    - .git
+    - artifacts
+    - reports
+    - cache
+    - memory
+  ignoreExtensions:
+    - .png
+    - .jpg
+    - .gif
+    - .lock
+confidenceThreshold: 0.5
+memory:
+  reuseIfUnchanged: true
+ai:
+  disambiguation: false
+  archTiebreak: false
+  narrative: false

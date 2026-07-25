@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/api/task-input.schema.json",
+  "title": "TaskInput (main thread -> specialist)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "skillRef", "brief", "lang"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "skillRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "entry", "version"],
+      "properties": {
+        "id": { "type": "string" },
+        "path": { "type": "string" },
+        "entry": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "brief": { "type": "string" },
+    "lang": { "type": "string", "enum": ["fr", "en", "both"] },
+    "files": { "type": "array", "items": { "type": "string" } },
+    "prior": { "type": "array", "items": { "type": "string" }, "description": "résumés Hand-off des dépendances" },
+    "knowledgeRefs": { "type": "array", "items": { "type": "string" } },
+    "tokenBudget": { "type": "number" },
+    "modelDecisionRef": { "type": "string", "description": "ADR-024 (additif) — artifactId de la ModelDecision" },
+    "knowledgeDecisionRef": { "type": "string", "description": "ADR-025 (additif) — artifactId de la KnowledgeDecision" },
+    "scheduleRef": { "type": "string", "description": "ADR-022 (additif) — artifactId du Schedule" },
+    "artifactRefs": { "type": "array", "items": { "type": "string" } }
+  }
+}

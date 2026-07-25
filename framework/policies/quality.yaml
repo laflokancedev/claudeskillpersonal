@@ -1,0 +1,24 @@
+# Politique de qualité. Le Quality Engine (validator-agent) et l'Architecture Score l'utilisent.
+gates:
+  architecture: 90
+  api: 90
+  security: 95
+  performance: 85
+  accessibility: 90
+  testing: 85
+  documentation: 90
+dimensions:
+  - Architecture
+  - Performance
+  - Documentation
+  - Security
+  - Tests
+  - UX
+  - API
+  - Maintainability
+  - Readability
+  - TechDebt
+weights:
+  Security: 2
+  Architecture: 1.5
+requireEvidence: true

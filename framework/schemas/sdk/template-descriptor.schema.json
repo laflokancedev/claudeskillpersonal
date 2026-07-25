@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/sdk/template-descriptor.schema.json",
+  "title": "Template descriptor (Template Engine, ADR-060)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "target", "file"],
+  "properties": {
+    "id": { "type": "string" },
+    "target": { "type": "string", "enum": ["markdown", "json", "yaml", "typescript", "javascript", "prompt", "documentation"] },
+    "file": { "type": "string" },
+    "variables": { "type": "array", "items": { "type": "string" } }
+  }
+}

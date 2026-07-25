@@ -1,0 +1,30 @@
+category: frontend
+signatures:
+  - id: react
+    confidence: 0.9
+    provides: [react, ui-components]
+    match:
+      depsAny: ["react"]
+  - id: nextjs
+    confidence: 0.95
+    provides: [nextjs, react, seo-fe]
+    match:
+      files: ["next.config.js", "next.config.mjs", "next.config.ts"]
+      depsAny: ["next"]
+  - id: vue
+    confidence: 0.9
+    provides: [vue]
+    match:
+      depsAny: ["vue"]
+      extensions: [".vue"]
+  - id: svelte
+    confidence: 0.9
+    provides: [svelte]
+    match:
+      files: ["svelte.config.js"]
+      extensions: [".svelte"]
+  - id: tailwind
+    confidence: 0.85
+    provides: [tailwind]
+    match:
+      files: ["tailwind.config.js", "tailwind.config.ts"]

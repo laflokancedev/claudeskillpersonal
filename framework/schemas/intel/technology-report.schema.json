@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/intel/technology-report.schema.json",
+  "title": "TechnologyReport (Technology Detector, ADR-038)",
+  "type": "object",
+  "required": ["apiVersion", "detections"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "generatedAt": { "type": "string" },
+    "detections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "confidence"],
+        "properties": {
+          "id": { "type": "string" }, "category": { "type": "string" },
+          "confidence": { "type": "number" },
+          "provides": { "type": "array", "items": { "type": "string" } },
+          "evidence": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

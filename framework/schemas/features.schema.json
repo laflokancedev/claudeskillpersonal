@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/features.schema.json",
+  "title": "Feature flags",
+  "type": "object",
+  "properties": {
+    "validator": { "type": "boolean" },
+    "knowledge": { "type": "boolean" },
+    "parallel": { "type": "boolean" },
+    "memory": { "type": "boolean" },
+    "reports": { "type": "boolean" },
+    "quality": { "type": "boolean" },
+    "router": { "type": "boolean" },
+    "scheduler": { "type": "boolean" },
+    "qualityDimensions": { "type": "object", "additionalProperties": { "type": "boolean" } }
+  }
+}

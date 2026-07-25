@@ -1,0 +1,7 @@
+# Gouvernance de l'écosystème (ADR-076 / ADR-065). L'acceptation est HUMAINE.
+states: [Draft, InReview, Accepted, Rejected, Deferred, Implemented, Deprecated, EndOfLife]
+requireHumanAcceptance: true
+requireCompatibilityProof: true
+deprecationWindowMinorVersions: 1
+# Une proposition ne peut être recommandée à l'acceptation que si compatibility.compatible=true
+# (ou routée vers une nouvelle famille */v2). Le cœur/SDK/API v1 restent gelés.

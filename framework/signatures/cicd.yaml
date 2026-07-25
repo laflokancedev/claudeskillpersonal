@@ -1,0 +1,17 @@
+category: cicd
+signatures:
+  - id: github-actions
+    confidence: 0.95
+    provides: [ci, cd, github-actions]
+    match:
+      pathContains: [".github/workflows/"]
+  - id: gitlab-ci
+    confidence: 0.9
+    provides: [ci, cd]
+    match:
+      files: [".gitlab-ci.yml"]
+  - id: circleci
+    confidence: 0.85
+    provides: [ci]
+    match:
+      pathContains: [".circleci/"]

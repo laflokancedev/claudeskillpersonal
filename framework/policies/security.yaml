@@ -1,0 +1,5 @@
+# Politique de sécurité. Bloquante. Une extension ne peut pas la relâcher (ADR-034).
+blocking: true
+minSecurityScore: 95
+denyExtensionOverride: true
+secretsInPromptsOrLogs: forbidden

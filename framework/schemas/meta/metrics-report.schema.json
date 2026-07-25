@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/meta/metrics-report.schema.json",
+  "title": "MetricsReport (Metrics Engine, ADR-077)",
+  "type": "object",
+  "required": ["metaApiVersion", "generatedAt", "metrics"],
+  "properties": {
+    "metaApiVersion": { "type": "string", "const": "1.0.0" },
+    "generatedAt": { "type": "string" },
+    "metrics": { "type": "object", "additionalProperties": { "type": "number" } }
+  }
+}

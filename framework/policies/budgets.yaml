@@ -1,0 +1,6 @@
+# Politique de budgets (tokens). Source de vérité — aucune de ces valeurs dans un agent.
+perRun: 120000
+perStep: 20000
+perSkill: 12000
+warnAtPct: 80
+maxSpecialists: 8

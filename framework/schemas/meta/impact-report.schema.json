@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/meta/impact-report.schema.json",
+  "title": "ImpactReport (Impact Analyzer, ADR-069)",
+  "type": "object",
+  "required": ["metaApiVersion", "target", "impacted"],
+  "properties": {
+    "metaApiVersion": { "type": "string", "const": "1.0.0" },
+    "target": { "type": "string" },
+    "impacted": { "type": "object" },
+    "risk": { "type": "string", "enum": ["low", "medium", "high"] },
+    "judgment": { "type": "boolean" }
+  }
+}

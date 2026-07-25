@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/api/final-document.schema.json",
+  "title": "FinalDocument (synthesis -> file + main thread)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "outfile", "execSummary"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "outfile": { "type": "string" },
+    "execSummary": { "type": "string" },
+    "conflicts": { "type": "array", "items": { "type": "string" } },
+    "assumptions": { "type": "array", "items": { "type": "string" } }
+  }
+}

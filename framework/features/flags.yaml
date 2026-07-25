@@ -1,0 +1,16 @@
+# Feature flags (ADR-031). Les moteurs lisent ces drapeaux ; aucun `if` dans un prompt.
+# Défaut = parité fonctionnelle avec Phase 2 (tout activé).
+validator: true
+knowledge: true
+parallel: true
+memory: true
+reports: true
+quality: true
+router: true
+scheduler: true
+intelligence: true
+extensions: true
+meta: true
+qualityDimensions:
+  UX: true
+  TechDebt: true

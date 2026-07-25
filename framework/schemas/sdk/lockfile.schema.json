@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/sdk/lockfile.schema.json",
+  "title": "Extension lockfile (Dependency Resolver, ADR-054)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sdkApiVersion", "resolved", "order"],
+  "properties": {
+    "sdkApiVersion": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "resolved": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "version", "source"],
+        "properties": {
+          "name": { "type": "string" }, "version": { "type": "string" },
+          "source": { "type": "string" }, "sdk": { "type": "string" },
+          "checksum": { "type": "string" }
+        }
+      }
+    },
+    "order": { "type": "array", "items": { "type": "string" } }
+  }
+}

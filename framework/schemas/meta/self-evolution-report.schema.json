@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/meta/self-evolution-report.schema.json",
+  "title": "SelfEvolutionReport (ADR-080)",
+  "type": "object",
+  "required": ["metaApiVersion", "generatedAt", "architecture", "techDebt", "metrics", "compatibility"],
+  "properties": {
+    "metaApiVersion": { "type": "string", "const": "1.0.0" },
+    "generatedAt": { "type": "string" },
+    "architecture": { "type": "object" },
+    "techDebt": { "type": "object" },
+    "metrics": { "type": "object" },
+    "compatibility": { "type": "object" },
+    "proposals": { "type": "array", "items": { "type": "object" } }
+  }
+}

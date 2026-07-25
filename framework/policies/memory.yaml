@@ -1,0 +1,8 @@
+# Politique de mémoire (ADR-011 / ADR-020).
+prefer:
+  - summaries
+  - references
+  - compressed
+retention:
+  summariesMaxFiles: 500
+  conversationTtlDays: 30

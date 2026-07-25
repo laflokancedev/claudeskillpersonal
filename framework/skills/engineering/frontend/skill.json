@@ -1,0 +1,28 @@
+{
+  "$schema": "../../../schemas/skill.schema.json",
+  "id": "engineering.frontend",
+  "name": "Frontend",
+  "version": "1.0.0",
+  "owner": { "name": "cmm07t83", "email": "cmm07t83@gmail.com" },
+  "description": "Expert frontend React/Next.js/TypeScript/Tailwind : composants, état, performance, SEO, conventions.",
+  "category": "engineering",
+  "tags": ["react", "nextjs", "typescript", "tailwind"],
+  "capabilities": ["react", "nextjs", "typescript", "tailwind", "ui-components", "state-management", "seo-fe", "code-splitting"],
+  "dependencies": [{ "capability": "design-tokens", "range": ">=1.0.0 <2.0.0" }],
+  "priority": 50,
+  "estimatedCost": { "unit": "tokens", "typical": 6000 },
+  "qualityLevel": "stable",
+  "maturityLevel": "stable",
+  "recommendedModels": ["claude-sonnet-5", "claude-opus-4-8"],
+  "inputs": ["brief", "files", "prior", "designTokens?"],
+  "outputs": { "outputFormat": "markdown", "sections": ["Arborescence", "Stratégie de rendu", "Composants & layouts", "Gestion d'état & data fetching", "Performance", "SEO & accessibilité runtime", "Conventions & erreurs", "Hand-off"] },
+  "compatibleCommands": ["frontend", "sds", "orchestrate"],
+  "compatibility": { "framework": ">=2.0.0 <3.0.0" },
+  "knowledge": [
+    { "file": "knowledge/react.md", "capabilities": ["react", "ui-components", "state-management"], "tokensApprox": 500 },
+    { "file": "knowledge/nextjs.md", "capabilities": ["nextjs", "seo-fe", "code-splitting"], "tokensApprox": 550 }
+  ],
+  "examples": [],
+  "documentation": "README.md",
+  "entry": "SKILL.md"
+}

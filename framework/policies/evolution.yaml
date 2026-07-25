@@ -1,0 +1,8 @@
+# Poids de priorisation (ADR-071, Roadmap Engine). Score = Σ(poids × dimension normalisée).
+# Déterministe ; le départage stratégique reste un jugement humain.
+weights:
+  roi: 0.35
+  risk: -0.25
+  complexity: -0.15
+  impact: 0.15
+  cost: -0.10

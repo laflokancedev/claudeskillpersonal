@@ -1,0 +1,57 @@
+id: sds
+version: 1.0.0
+description: "Software Design Specification — vertical slice (catégorie engineering)."
+compatibility:
+  framework: ">=2.0.0 <3.0.0"
+inputs: [brief, lang]
+tokenBudget:
+  perRun: 120000
+steps:
+  - id: arch
+    uses: [architecture-style, adr, diagrams]
+    with:
+      brief: "Architecture cible pour: {{brief}}"
+    parallelGroup: 1
+    produces: arch
+  - id: data
+    uses: [postgres-schema, indexing, migrations]
+    with:
+      brief: "Modele de donnees pour: {{brief}}"
+    needs: [arch]
+    parallelGroup: 2
+    produces: data
+  - id: api
+    uses: [openapi, rest, versioning]
+    with:
+      brief: "Contrats API pour: {{brief}}"
+    needs: [data]
+    parallelGroup: 3
+    produces: api
+  - id: backend
+    uses: [services, workers, caching]
+    with:
+      brief: "Backend pour: {{brief}}"
+    needs: [api]
+    parallelGroup: 4
+    produces: backend
+  - id: frontend
+    uses: [react, nextjs, code-splitting]
+    with:
+      brief: "Frontend pour: {{brief}}"
+    needs: [api]
+    parallelGroup: 4
+    produces: frontend
+merge:
+  agent: synthesis-agent
+  outfile: "./SDS-{{slug}}.md"
+validation:
+  agent: validator-agent
+  gates:
+    architecture: 90
+    api: 90
+    documentation: 90
+  maxReplan: 1
+rollback:
+  onGateFail: replan-domain
+onError:
+  strategy: abort-and-report

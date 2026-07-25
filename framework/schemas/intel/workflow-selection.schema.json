@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/intel/workflow-selection.schema.json",
+  "title": "WorkflowSelection (ADR-042)",
+  "type": "object",
+  "required": ["apiVersion", "workflowId", "justification"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "workflowId": { "type": "string" },
+    "score": { "type": "number" },
+    "justification": { "type": "string" }
+  }
+}

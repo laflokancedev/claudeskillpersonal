@@ -1,0 +1,14 @@
+# Workflow Resolver (ADR-042) : règles déclaratives. Première règle qui matche gagne ;
+# sinon `default`. Conditions évaluées contre le ProjectProfile + Intent.
+rules:
+  - id: has-nextjs
+    when:
+      framework: nextjs
+    workflow: sds
+    score: 0.8
+  - id: any-code-project
+    when:
+      minFiles: 1
+    workflow: sds
+    score: 0.5
+default: sds

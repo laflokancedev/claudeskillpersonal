@@ -1,0 +1,27 @@
+# Politique de modèles. Le Model Router (tools/model-router.mjs) applique ces règles.
+# Aucun id de modèle n'est codé dans un agent.
+roles:
+  orchestrator: claude-sonnet-5
+  validator: claude-sonnet-5
+  synthesis: claude-opus-4-8
+  specialistDefault: claude-sonnet-5
+routing:
+  - when:
+      minQuality: 90
+    use:
+      model: claude-opus-4-8
+      reasoning: high
+      temperature: 0.2
+      maxTokens: 8000
+  - when:
+      complexity: low
+    use:
+      model: claude-haiku-4-5-20251001
+      reasoning: low
+      temperature: 0.3
+      maxTokens: 4000
+default:
+  model: claude-sonnet-5
+  reasoning: medium
+  temperature: 0.3
+  maxTokens: 6000

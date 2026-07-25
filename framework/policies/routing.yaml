@@ -1,0 +1,13 @@
+# Politique de résolution des capacités et du knowledge.
+capabilityResolution:
+  order:
+    - priority
+    - maturityLevel
+knowledge:
+  maxDocsPerTask: 3
+  selectBy:
+    - capabilities
+    - tags
+    - version
+    - qualityScore
+  minQualityScore: 0

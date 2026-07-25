@@ -1,0 +1,22 @@
+{
+  "$schema": "../../schemas/sdk/extension-manifest.schema.json",
+  "name": "hello-pack",
+  "version": "1.0.0",
+  "kind": "pack",
+  "sdk": ">=1.0.0 <2.0.0",
+  "sdkApiVersion": "1.0.0",
+  "author": "example",
+  "license": "MIT",
+  "dependencies": [],
+  "capabilities": ["greeting"],
+  "provides": {
+    "skills": ["skills/greeter"],
+    "signatures": [],
+    "workflows": []
+  },
+  "hooks": [
+    { "name": "afterScan", "handler": "hooks/afterScan.mjs", "priority": 50 }
+  ],
+  "permissions": ["read:registry", "register:skill", "register:hook"],
+  "assets": []
+}

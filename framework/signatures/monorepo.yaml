@@ -1,0 +1,17 @@
+category: monorepo
+signatures:
+  - id: nx
+    confidence: 0.9
+    provides: [monorepo, nx]
+    match:
+      files: ["nx.json"]
+  - id: turborepo
+    confidence: 0.9
+    provides: [monorepo, turborepo]
+    match:
+      files: ["turbo.json"]
+  - id: pnpm-workspace
+    confidence: 0.85
+    provides: [monorepo, workspace, pnpm]
+    match:
+      files: ["pnpm-workspace.yaml"]

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/sdk/hook-registration.schema.json",
+  "title": "Hook registration (Hook System, ADR-056)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "handler"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "enum": ["beforeScan", "afterScan", "beforeWorkflow", "afterWorkflow", "beforeSpecialist", "afterSpecialist", "beforeMerge", "afterMerge", "beforeReport", "afterReport"]
+    },
+    "handler": { "type": "string" },
+    "priority": { "type": "integer", "minimum": 0, "maximum": 100 }
+  }
+}

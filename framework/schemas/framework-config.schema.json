@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/framework-config.schema.json",
+  "title": "Framework configuration",
+  "type": "object",
+  "required": ["framework"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "framework": {
+      "type": "object",
+      "required": ["name", "version", "apiVersion"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "apiVersion": { "type": "string" },
+        "registrySchemaVersion": { "type": "string" }
+      }
+    },
+    "discovery": { "type": "object" },
+    "tokenBudget": { "type": "object" },
+    "memory": { "type": "object" },
+    "qualityGates": { "type": "object", "additionalProperties": { "type": "integer" } },
+    "models": { "type": "object" },
+    "capabilityCollision": { "type": "object" }
+  }
+}

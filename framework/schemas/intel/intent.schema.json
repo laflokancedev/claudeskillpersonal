@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/intel/intent.schema.json",
+  "title": "Intent (Intent Resolver)",
+  "type": "object",
+  "required": ["apiVersion", "raw"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "raw": { "type": "string" },
+    "goal": { "type": "string" },
+    "targetRepo": { "type": "string" }
+  }
+}

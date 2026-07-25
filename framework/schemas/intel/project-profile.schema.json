@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/intel/project-profile.schema.json",
+  "title": "ProjectProfile (ADR-040) — contrat central, versionné",
+  "type": "object",
+  "required": ["apiVersion", "profileVersion", "contentHash", "generatedAt", "languages", "size"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "profileVersion": { "type": "string" },
+    "contentHash": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "languages": { "type": "array", "items": { "type": "object" } },
+    "frameworks": { "type": "array", "items": { "type": "string" } },
+    "stack": { "type": "object" },
+    "architecture": { "type": "object" },
+    "patterns": { "type": "array", "items": { "type": "string" } },
+    "services": { "type": "array", "items": { "type": "string" } },
+    "modules": { "type": "array", "items": { "type": "string" } },
+    "tests": { "type": "object" },
+    "ci": { "type": "array", "items": { "type": "string" } },
+    "cd": { "type": "array", "items": { "type": "string" } },
+    "risks": { "type": "array", "items": { "type": "string" } },
+    "techDebt": { "type": "array", "items": { "type": "string" } },
+    "documentation": { "type": "object" },
+    "security": { "type": "object" },
+    "performance": { "type": "object" },
+    "size": { "type": "object" },
+    "complexity": { "type": "object" }
+  }
+}

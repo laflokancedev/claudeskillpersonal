@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/meta/compatibility-report.schema.json",
+  "title": "CompatibilityReport (Compatibility Analyzer, ADR-070)",
+  "type": "object",
+  "required": ["metaApiVersion", "compatible", "checks", "breaks"],
+  "properties": {
+    "metaApiVersion": { "type": "string", "const": "1.0.0" },
+    "generatedAt": { "type": "string" },
+    "compatible": { "type": "boolean" },
+    "checks": { "type": "object" },
+    "breaks": { "type": "array", "items": { "type": "string" } }
+  }
+}

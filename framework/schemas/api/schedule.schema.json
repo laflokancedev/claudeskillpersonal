@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/api/schedule.schema.json",
+  "title": "Schedule (scheduler -> thread)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "waves"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "waves": { "type": "array", "items": { "type": "array", "items": { "type": "string" } } },
+    "maxSpecialists": { "type": "integer", "minimum": 1 },
+    "timeoutMsPerTask": { "type": "integer", "minimum": 1 },
+    "retry": {
+      "type": "object",
+      "properties": { "max": { "type": "integer", "minimum": 0 }, "backoff": { "type": "string" } }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/api/validation-report.schema.json",
+  "title": "ValidationReport (validator -> main thread)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "scores", "verdict"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "scores": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0, "maximum": 100 } },
+    "contradictions": { "type": "array", "items": { "type": "string" } },
+    "conventionIssues": { "type": "array", "items": { "type": "string" } },
+    "fixes": { "type": "array", "items": { "type": "string" } },
+    "verdict": { "type": "string", "enum": ["conforme", "non-conforme", "conforme-avec-reserves"] }
+  }
+}

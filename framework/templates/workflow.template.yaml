@@ -1,0 +1,32 @@
+id: <workflow-id>            # kebab-case, unique
+version: 0.1.0
+description: "<Ce que produit le workflow>"
+compatibility:
+  framework: ">=2.0.0 <3.0.0"
+inputs: [brief, lang]
+tokenBudget:
+  perRun: 120000
+steps:
+  - id: step1
+    uses: [<capacité-1>, <capacité-2>]   # capacités du registre, PAS de nom de skill
+    with:
+      brief: "<gabarit de brief> {{brief}}"
+    parallelGroup: 1
+    produces: step1
+  - id: step2
+    uses: [<capacité-3>]
+    needs: [step1]                        # dépendances → ordre
+    parallelGroup: 2
+    produces: step2
+merge:
+  agent: synthesis-agent
+  outfile: "./<id>-{{slug}}.md"
+validation:
+  agent: validator-agent
+  gates:
+    documentation: 90
+  maxReplan: 1
+rollback:
+  onGateFail: replan-domain
+onError:
+  strategy: abort-and-report

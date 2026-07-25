@@ -1,0 +1,20 @@
+{
+  "name": "dev-crew-marketplace",
+  "owner": {
+    "name": "cmm07t83",
+    "email": "cmm07t83@gmail.com"
+  },
+  "metadata": {
+    "description": "Marketplace de la plateforme multi-agent dev-crew pour Claude Code.",
+    "version": "6.0.0"
+  },
+  "plugins": [
+    {
+      "name": "dev-crew",
+      "source": ".",
+      "description": "Plateforme d'orchestration d'experts IA : registre par capacités, workflows YAML, validation + quality gates, tooling déterministe. Extensible à des centaines de skills.",
+      "version": "6.0.0",
+      "keywords": ["multi-agent", "platform", "registry", "workflow-engine"]
+    }
+  ]
+}

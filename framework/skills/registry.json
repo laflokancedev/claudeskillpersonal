@@ -1,0 +1,347 @@
+{
+  "schemaVersion": "1.0.0",
+  "framework": "6.0.0",
+  "generatedAt": "2026-07-25T16:01:11.057Z",
+  "sourceHash": "sha256:a469972d015f20be9f4558ffdb391aaa7cdddc36cc7ae41be7781576f4803b06",
+  "skills": [
+    {
+      "id": "documentation.greeter",
+      "version": "1.0.0",
+      "category": "documentation",
+      "path": "extensions/hello-pack/skills/greeter",
+      "entry": "SKILL.md",
+      "capabilities": [
+        "greeting"
+      ],
+      "priority": 40,
+      "maturityLevel": "beta",
+      "estimatedCost": 500,
+      "recommendedModels": [
+        "claude-haiku-4-5-20251001"
+      ],
+      "compatibleCommands": [
+        "orchestrate"
+      ],
+      "knowledge": []
+    },
+    {
+      "id": "engineering.api",
+      "version": "1.0.0",
+      "category": "engineering",
+      "path": "skills/engineering/api",
+      "entry": "SKILL.md",
+      "capabilities": [
+        "openapi",
+        "rest",
+        "endpoints",
+        "versioning",
+        "pagination",
+        "error-format",
+        "webhooks",
+        "idempotency"
+      ],
+      "priority": 55,
+      "maturityLevel": "stable",
+      "estimatedCost": 6000,
+      "recommendedModels": [
+        "claude-sonnet-5",
+        "claude-opus-4-8"
+      ],
+      "compatibleCommands": [
+        "api",
+        "sds",
+        "orchestrate"
+      ],
+      "knowledge": [
+        {
+          "file": "knowledge/overview.md",
+          "capabilities": [
+            "error-format",
+            "pagination",
+            "idempotency"
+          ],
+          "tokensApprox": 440
+        }
+      ]
+    },
+    {
+      "id": "engineering.architecture",
+      "version": "1.0.0",
+      "category": "engineering",
+      "path": "skills/engineering/architecture",
+      "entry": "SKILL.md",
+      "capabilities": [
+        "architecture-style",
+        "ddd",
+        "clean-architecture",
+        "hexagonal",
+        "microservices",
+        "monolith",
+        "adr",
+        "diagrams"
+      ],
+      "priority": 60,
+      "maturityLevel": "stable",
+      "estimatedCost": 7000,
+      "recommendedModels": [
+        "claude-opus-4-8",
+        "claude-sonnet-5"
+      ],
+      "compatibleCommands": [
+        "architecture",
+        "sds",
+        "orchestrate"
+      ],
+      "knowledge": [
+        {
+          "file": "knowledge/overview.md",
+          "capabilities": [
+            "architecture-style",
+            "adr"
+          ],
+          "tokensApprox": 450
+        }
+      ]
+    },
+    {
+      "id": "engineering.backend",
+      "version": "1.0.0",
+      "category": "engineering",
+      "path": "skills/engineering/backend",
+      "entry": "SKILL.md",
+      "capabilities": [
+        "services",
+        "workers",
+        "queues",
+        "auth-integration",
+        "caching",
+        "logging",
+        "observability-hooks"
+      ],
+      "priority": 55,
+      "maturityLevel": "stable",
+      "estimatedCost": 6500,
+      "recommendedModels": [
+        "claude-sonnet-5",
+        "claude-opus-4-8"
+      ],
+      "compatibleCommands": [
+        "backend",
+        "sds",
+        "orchestrate"
+      ],
+      "knowledge": [
+        {
+          "file": "knowledge/overview.md",
+          "capabilities": [
+            "queues",
+            "caching"
+          ],
+          "tokensApprox": 420
+        }
+      ]
+    },
+    {
+      "id": "engineering.database",
+      "version": "1.0.0",
+      "category": "engineering",
+      "path": "skills/engineering/database",
+      "entry": "SKILL.md",
+      "capabilities": [
+        "postgres-schema",
+        "indexing",
+        "migrations",
+        "relations",
+        "query-optimization",
+        "er-diagram"
+      ],
+      "priority": 55,
+      "maturityLevel": "stable",
+      "estimatedCost": 6000,
+      "recommendedModels": [
+        "claude-sonnet-5",
+        "claude-opus-4-8"
+      ],
+      "compatibleCommands": [
+        "database",
+        "sds",
+        "orchestrate"
+      ],
+      "knowledge": [
+        {
+          "file": "knowledge/overview.md",
+          "capabilities": [
+            "indexing",
+            "migrations"
+          ],
+          "tokensApprox": 430
+        }
+      ]
+    },
+    {
+      "id": "engineering.frontend",
+      "version": "1.0.0",
+      "category": "engineering",
+      "path": "skills/engineering/frontend",
+      "entry": "SKILL.md",
+      "capabilities": [
+        "react",
+        "nextjs",
+        "typescript",
+        "tailwind",
+        "ui-components",
+        "state-management",
+        "seo-fe",
+        "code-splitting"
+      ],
+      "priority": 50,
+      "maturityLevel": "stable",
+      "estimatedCost": 6000,
+      "recommendedModels": [
+        "claude-sonnet-5",
+        "claude-opus-4-8"
+      ],
+      "compatibleCommands": [
+        "frontend",
+        "sds",
+        "orchestrate"
+      ],
+      "knowledge": [
+        {
+          "file": "knowledge/react.md",
+          "capabilities": [
+            "react",
+            "ui-components",
+            "state-management"
+          ],
+          "tokensApprox": 500
+        },
+        {
+          "file": "knowledge/nextjs.md",
+          "capabilities": [
+            "nextjs",
+            "seo-fe",
+            "code-splitting"
+          ],
+          "tokensApprox": 550
+        }
+      ]
+    }
+  ],
+  "capabilityIndex": {
+    "greeting": [
+      "documentation.greeter"
+    ],
+    "openapi": [
+      "engineering.api"
+    ],
+    "rest": [
+      "engineering.api"
+    ],
+    "endpoints": [
+      "engineering.api"
+    ],
+    "versioning": [
+      "engineering.api"
+    ],
+    "pagination": [
+      "engineering.api"
+    ],
+    "error-format": [
+      "engineering.api"
+    ],
+    "webhooks": [
+      "engineering.api"
+    ],
+    "idempotency": [
+      "engineering.api"
+    ],
+    "architecture-style": [
+      "engineering.architecture"
+    ],
+    "ddd": [
+      "engineering.architecture"
+    ],
+    "clean-architecture": [
+      "engineering.architecture"
+    ],
+    "hexagonal": [
+      "engineering.architecture"
+    ],
+    "microservices": [
+      "engineering.architecture"
+    ],
+    "monolith": [
+      "engineering.architecture"
+    ],
+    "adr": [
+      "engineering.architecture"
+    ],
+    "diagrams": [
+      "engineering.architecture"
+    ],
+    "services": [
+      "engineering.backend"
+    ],
+    "workers": [
+      "engineering.backend"
+    ],
+    "queues": [
+      "engineering.backend"
+    ],
+    "auth-integration": [
+      "engineering.backend"
+    ],
+    "caching": [
+      "engineering.backend"
+    ],
+    "logging": [
+      "engineering.backend"
+    ],
+    "observability-hooks": [
+      "engineering.backend"
+    ],
+    "postgres-schema": [
+      "engineering.database"
+    ],
+    "indexing": [
+      "engineering.database"
+    ],
+    "migrations": [
+      "engineering.database"
+    ],
+    "relations": [
+      "engineering.database"
+    ],
+    "query-optimization": [
+      "engineering.database"
+    ],
+    "er-diagram": [
+      "engineering.database"
+    ],
+    "react": [
+      "engineering.frontend"
+    ],
+    "nextjs": [
+      "engineering.frontend"
+    ],
+    "typescript": [
+      "engineering.frontend"
+    ],
+    "tailwind": [
+      "engineering.frontend"
+    ],
+    "ui-components": [
+      "engineering.frontend"
+    ],
+    "state-management": [
+      "engineering.frontend"
+    ],
+    "seo-fe": [
+      "engineering.frontend"
+    ],
+    "code-splitting": [
+      "engineering.frontend"
+    ]
+  }
+}

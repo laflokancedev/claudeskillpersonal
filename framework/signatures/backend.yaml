@@ -1,0 +1,29 @@
+category: backend
+signatures:
+  - id: express
+    confidence: 0.85
+    provides: [services, rest]
+    match:
+      depsAny: ["express"]
+  - id: nestjs
+    confidence: 0.9
+    provides: [services, rest]
+    match:
+      files: ["nest-cli.json"]
+      depsAny: ["@nestjs/core"]
+  - id: fastapi
+    confidence: 0.9
+    provides: [services, rest, openapi]
+    match:
+      depsAny: ["fastapi"]
+  - id: django
+    confidence: 0.9
+    provides: [services]
+    match:
+      files: ["manage.py"]
+      depsAny: ["django"]
+  - id: go-module
+    confidence: 0.85
+    provides: [services]
+    match:
+      files: ["go.mod"]

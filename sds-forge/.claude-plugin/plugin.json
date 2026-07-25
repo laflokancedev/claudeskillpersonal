@@ -1,0 +1,19 @@
+{
+  "name": "sds-forge",
+  "version": "1.0.0",
+  "description": "Génère une Software Design Specification (SDS) complète et production-ready pour une app/plugin web via une méthode en 16 étapes. Command /sds, skill auto-trigger, et sous-agent dédié qui isole le contexte et écrit le doc dans un fichier .md.",
+  "author": {
+    "name": "cmm07t83",
+    "email": "cmm07t83@gmail.com"
+  },
+  "keywords": [
+    "sds",
+    "architecture",
+    "software-design-specification",
+    "design-doc",
+    "blueprint",
+    "spec",
+    "production-ready"
+  ],
+  "license": "MIT"
+}

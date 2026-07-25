@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/api/model-decision.schema.json",
+  "title": "ModelDecision (model-router -> thread)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "model"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "taskId": { "type": ["string", "null"] },
+    "model": { "type": "string" },
+    "temperature": { "type": "number", "minimum": 0, "maximum": 2 },
+    "reasoning": { "type": "string", "enum": ["low", "medium", "high"] },
+    "maxTokens": { "type": "integer", "minimum": 1 },
+    "rationale": { "type": "string" }
+  }
+}

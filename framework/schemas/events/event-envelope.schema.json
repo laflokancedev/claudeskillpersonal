@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/events/event-envelope.schema.json",
+  "title": "Event envelope (Event Bus, ADR-021)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["eventId", "type", "runId", "seq", "ts"],
+  "properties": {
+    "eventId": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": [
+        "RunStarted", "WorkflowLoaded", "CapabilitiesResolved", "PlanGenerated",
+        "TaskQueued", "TaskStarted", "TaskCompleted", "ValidationStarted",
+        "ValidationCompleted", "MergeStarted", "MergeCompleted", "DocumentGenerated",
+        "RunFinished", "RunFailed"
+      ]
+    },
+    "runId": { "type": "string" },
+    "seq": { "type": "integer", "minimum": 0 },
+    "ts": { "type": "string" },
+    "payload": { "type": "object" }
+  }
+}

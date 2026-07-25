@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/meta/framework-model.schema.json",
+  "title": "FrameworkModel (Framework Introspection, ADR-066)",
+  "type": "object",
+  "required": ["metaApiVersion", "generatedAt", "counts", "components"],
+  "properties": {
+    "metaApiVersion": { "type": "string", "const": "1.0.0" },
+    "generatedAt": { "type": "string" },
+    "counts": { "type": "object", "additionalProperties": { "type": "integer" } },
+    "components": { "type": "object" },
+    "edges": { "type": "array", "items": { "type": "object" } }
+  }
+}

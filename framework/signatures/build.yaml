@@ -1,0 +1,38 @@
+category: build
+signatures:
+  - id: node-esm
+    confidence: 0.95
+    provides: [javascript, nodejs, esm]
+    match:
+      extensions: [".mjs"]
+  - id: node-package
+    confidence: 0.9
+    provides: [javascript, nodejs, npm]
+    match:
+      files: ["package.json"]
+  - id: typescript
+    confidence: 0.9
+    provides: [typescript]
+    match:
+      files: ["tsconfig.json"]
+      extensions: [".ts", ".tsx"]
+  - id: json-schema
+    confidence: 0.85
+    provides: [json-schema, contracts]
+    match:
+      pathContains: [".schema.json"]
+  - id: yaml-config
+    confidence: 0.6
+    provides: [yaml, declarative-config]
+    match:
+      extensions: [".yaml", ".yml"]
+  - id: claude-code-plugin
+    confidence: 0.99
+    provides: [claude-code-plugin, agent-framework]
+    match:
+      files: ["plugin.json", "marketplace.json"]
+  - id: markdown-docs
+    confidence: 0.5
+    provides: [documentation]
+    match:
+      pathContains: ["docs/"]

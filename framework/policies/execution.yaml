@@ -1,0 +1,8 @@
+# Politique d'exécution. Le Scheduler (tools/scheduler.mjs) applique ces valeurs.
+maxSpecialists: 8
+timeoutMsPerTask: 120000
+retry:
+  max: 1
+  backoff: exponential
+parallelism: auto
+barriersOnDependency: true

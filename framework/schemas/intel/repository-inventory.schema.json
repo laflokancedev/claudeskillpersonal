@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/intel/repository-inventory.schema.json",
+  "title": "RepositoryInventory (Repository Scanner, ADR-037)",
+  "type": "object",
+  "required": ["apiVersion", "root", "contentHash", "generatedAt", "files"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "root": { "type": "string" },
+    "contentHash": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "totalFiles": { "type": "integer" },
+    "totalBytes": { "type": "integer" },
+    "extensions": { "type": "object", "additionalProperties": { "type": "integer" } },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "ext", "size", "hash"],
+        "properties": {
+          "path": { "type": "string" }, "ext": { "type": "string" },
+          "size": { "type": "integer" }, "hash": { "type": "string" }
+        }
+      }
+    },
+    "manifests": { "type": "array", "items": { "type": "string" } },
+    "licenses": { "type": "array", "items": { "type": "string" } }
+  }
+}

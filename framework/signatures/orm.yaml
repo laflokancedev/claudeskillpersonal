@@ -1,0 +1,23 @@
+category: orm
+signatures:
+  - id: prisma
+    confidence: 0.95
+    provides: [postgres-schema, migrations]
+    match:
+      files: ["schema.prisma"]
+      depsAny: ["prisma", "@prisma/client"]
+  - id: typeorm
+    confidence: 0.85
+    provides: [postgres-schema]
+    match:
+      depsAny: ["typeorm"]
+  - id: drizzle
+    confidence: 0.85
+    provides: [postgres-schema, migrations]
+    match:
+      depsAny: ["drizzle-orm"]
+  - id: sqlalchemy
+    confidence: 0.85
+    provides: [postgres-schema]
+    match:
+      depsAny: ["sqlalchemy"]

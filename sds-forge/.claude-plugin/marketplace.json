@@ -1,0 +1,20 @@
+{
+  "name": "sds-forge-marketplace",
+  "owner": {
+    "name": "cmm07t83",
+    "email": "cmm07t83@gmail.com"
+  },
+  "metadata": {
+    "description": "Marketplace mono-plugin pour SDS-Forge.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "sds-forge",
+      "source": ".",
+      "description": "Génère une Software Design Specification production-ready (16 étapes) : command /sds + skill auto-trigger + sous-agent sds-architect.",
+      "version": "1.0.0",
+      "keywords": ["sds", "architecture", "spec", "design-doc"]
+    }
+  ]
+}

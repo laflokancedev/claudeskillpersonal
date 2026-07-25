@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/api/deliverable.schema.json",
+  "title": "Deliverable (specialist -> main thread)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "domain", "markdown", "handoff"],
+  "properties": {
+    "apiVersion": { "type": "string", "const": "1.0.0" },
+    "domain": { "type": "string" },
+    "skillId": { "type": "string" },
+    "markdown": { "type": "string" },
+    "handoff": { "type": "string" },
+    "assumptions": { "type": "array", "items": { "type": "string" } },
+    "trace": { "$ref": "../trace.schema.json" },
+    "qualityHints": { "type": "object", "description": "ADR-029 (additif) — indices pour le Quality Engine" },
+    "artifactId": { "type": "string", "description": "ADR-026 (additif)" }
+  }
+}

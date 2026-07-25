@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/sdk/extension-validation-report.schema.json",
+  "title": "ExtensionValidationReport (Validation SDK, ADR-061)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "valid", "errors"],
+  "properties": {
+    "name": { "type": "string" },
+    "valid": { "type": "boolean" },
+    "errors": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  }
+}

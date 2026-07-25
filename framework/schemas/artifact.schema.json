@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dev-crew/schemas/artifact.schema.json",
+  "title": "Artifact (Artifact Store)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "kind", "version", "hash", "date", "payload"],
+  "properties": {
+    "id": { "type": "string" },
+    "kind": { "type": "string", "enum": ["runs", "plans", "reports", "validation", "documents"] },
+    "version": { "type": "string" },
+    "hash": { "type": "string" },
+    "date": { "type": "string" },
+    "workflow": { "type": ["string", "null"] },
+    "origin": { "type": "string" },
+    "payload": {}
+  }
+}

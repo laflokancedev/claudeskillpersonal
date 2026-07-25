@@ -1,0 +1,26 @@
+# Dépendances
+node_modules/
+
+# Artefacts runtime générés (on garde la structure + les README)
+/reports/*
+!/reports/README.md
+/cache/*
+!/cache/README.md
+
+# Mémoire : contenu runtime ignoré, structure + docs conservés
+/memory/**/*
+!/memory/**/README.md
+!/memory/**/.gitkeep
+
+# Artifact Store : contenu runtime ignoré, structure + README conservés
+/artifacts/**/*
+!/artifacts/**/README.md
+!/artifacts/**/.gitkeep
+
+# Propositions méta (Phase 6) : runtime ignoré, README conservé
+/proposals/**/*
+!/proposals/**/README.md
+
+# Sorties de génération locales
+SDS-*.md
+DEV-CREW-*.md
